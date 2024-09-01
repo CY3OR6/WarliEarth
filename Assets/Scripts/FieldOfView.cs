@@ -10,15 +10,13 @@ public class FieldOfView : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-        GetComponent<MeshCollider>().sharedMesh = mesh;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         float fov = 90f;
-        Vector3 origin = Vector3.zero;
+        Vector3 origin = transform.position;
         int rayCount = 50;
         float angle = 0f;
         float angleIncrease = fov / rayCount;
